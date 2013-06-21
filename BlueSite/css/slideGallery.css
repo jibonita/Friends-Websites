@@ -1,0 +1,135 @@
+﻿.gallery {
+	margin: 1px 0;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.gallery .holder {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+	margin-left: 47px;
+}
+.gallery .holder ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 30000px;
+}
+.gallery .holder ul li {
+	float: left;
+	padding: 0 1px 1px 0;
+}
+.gallery .holder ul li img 
+{
+	display: block; 
+	height: 300px;
+}
+
+.back, .ahead, .gallery .holder ul li img 
+{
+	height: 300px;
+}
+
+
+.control {
+	display: none;
+}
+/**** not currently used ******
+
+.stopped .start { background: url(../images/slideG/btn-play.png) no-repeat; }
+.stopped .stop { background: url(../images/slideG/btn-pause-disable.png) no-repeat; }
+
+.control {
+	font-size: 18px;
+	line-height: 21px;
+	padding: 5px 0 0;
+}
+
+.next,
+.prev {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -30px;
+	width: 40px;
+	height: 40px;
+	background: url(../images/slideG/btn-next.png) no-repeat;
+	z-index: 20;
+	overflow: hidden;
+	text-indent: -9999px;
+	outline: none;
+	cursor: pointer;
+}
+.next-disable { background: url(../images/slideG/btn-next-disable.png) no-repeat; }
+.prev {
+	background: url(../images/slideG/btn-prev.png) no-repeat;
+	right: auto;
+	left: 10px;
+}
+.prev-disable { background: url(../images/slideG/btn-prev-disable.png) no-repeat; }
+.stop,
+.start {
+	background: url(../images/slideG/btn-pause.png) no-repeat;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin: 0 0 0 10px;
+	outline: none;
+	cursor: pointer;
+}
+.start,
+.no-active .start {
+	margin: 0;
+	background: url(../images/slideG/btn-play-disable.png) no-repeat;
+}
+***** end of non used code  ************/
+
+
+.back, .ahead
+{
+	position: absolute;
+	height: 300px;
+	width: 45px;
+	top: 0px;
+	text-align: center;
+	vertical-align:middle;
+	cursor: pointer;
+	line-height:300px;
+	font-family: Comic Sans MS;
+	font-size: 60px;
+	color: #FFF;
+	background: #AED0F3;
+	
+}
+.back:hover, .ahead:hover
+{
+	Qbackground: #abd6f6;
+	background: #add1f3;
+	background: #accbe7;
+	Qcolor: #deebfb;
+	color: #eef6f8;
+}
+.back
+{
+	left: 0px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	border-top-left-radius: 10px;
+	
+	border-right: 2px solid #FFF;
+}
+.ahead
+{
+	right: 0px;
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-right-radius: 10px;
+	
+	border-left: 2px solid #FFF;
+}
