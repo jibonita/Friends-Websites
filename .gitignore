@@ -216,6 +216,7 @@ pip-log.txt
 
 #STEF Custom FIles & Folders
 .gitignore
+.gitattributes
 BlueSite/
 Eli_Dareli/
 Tarlin/MATERIALS/
