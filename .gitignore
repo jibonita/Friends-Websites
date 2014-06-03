@@ -213,3 +213,11 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#STEF Custom FIles & Folders
+.gitignore
+BlueSite/
+Eli_Dareli/
+Tarlin/MATERIALS/
+Tarlin/PromoBox/
+
