@@ -1,0 +1,9 @@
+div{
+	margin:5px;
+	border: 1px solid black;
+}
+
+#wrapper{
+	background: url(../mockup_1340.jpg) center top no-repeat;
+	height: 900px;
+}
