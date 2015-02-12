@@ -3,14 +3,13 @@ div{
 }
 
 
-#wrapper{
+body, #wrapper{
 	Qborder: 2px solid red;
 	text-align: center;
 }
 
-#holder{
+.holder{
 	margin: 0 auto;
-	height: 900px;
 	width: 1024px;
 	text-align: left;
 
@@ -158,3 +157,13 @@ h2.featured-title{
 	font-size:0.9em;
 }
 
+.col5{
+	float: left;
+	margin-right: 1%;
+	width: 19%;
+}
+.row:after, .row:before {
+    content: " ";
+    display: block;
+    clear: both;
+}

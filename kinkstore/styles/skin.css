@@ -1,11 +1,22 @@
 body{
   	font-size: 10px;
 	font-family: Arial;
-	Qbackground: url(../images/bgr_grad.png) repeat-x;
+	
+	Qbackground-image: url(../images/wallpaper_sample_1600_10q.jpg), url(../images/bgr_grad.png);
+	background-image: url(../images/wallpaper_sample_1650_10q.jpg), url(../images/bgr_grad.png);
+	background-position: top right, left top;
+	background-repeat: no-repeat, repeat-x;
+
+
+}
+
+#wrapper{
+	background: red;
 }
 
 #holder{
 	Qbackground: url(../mockup_1340.jpg) center top no-repeat;
+	border: 2px solid blue;
 }
 
 #account-bar{
@@ -14,16 +25,28 @@ body{
 
 #logo-bar{
 	font-size: 6em;
-	letter-spacing: -10px;
+	Qletter-spacing: -10px;
+	font-weight: 200;
+	background: url(../images/header_bgr.png) repeat-x;
 }
 
 
-#logo-bar span:first-child{
+#logo-bar span:nth-child(2n+1){
 	color: #fa204d;
 }
 
-#logo-bar span:last-child{
+#logo-bar span:nth-child(2n){
 	color: #fff;
+}
+
+#logo-bar span:nth-child(3n){
+	Qfont-size: 1.2em;
+	display: inline-block;
+	background: #fa204d;
+	height: 10px;
+	width: 10px;
+	border-radius: 5px;
+	margin: 70px 5px auto;
 }
 
 #search-box input{
@@ -125,4 +148,17 @@ body{
 #featured{
 	background: #fff;
 	background: #ccc;
+}
+
+
+
+footer{
+	 background: #000;
+}
+
+#copyright{
+	color: white;
+	border-top: 2px solid #d0d0d0;
+	padding: 18px 0 12px;
+	font-size: 1.2em;
 }
