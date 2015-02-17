@@ -1,0 +1,41 @@
+@media screen and (max-width: 1200px) {
+  
+  body{
+  	background: red;
+  }
+  .holder {
+     width: 940px;
+  }
+
+  #content > ul li.item{
+  	width: 31%;
+  	margin: 5px 1%;
+  }
+
+  #content > ul li.item img{
+  	width: 90%;
+  	height: 90%;
+  }
+
+}
+
+
+
+@media screen and (max-width: 990px) {
+  
+  body{
+  	background: yellow;
+  }
+
+  .holder {
+     width: 720px;
+  }
+
+  #sidebar{
+  	display: none;
+  }
+
+  #content{
+  	margin-left: 0;
+  }
+}
