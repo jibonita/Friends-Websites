@@ -39,3 +39,15 @@
   	margin-left: 0;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+
+	body{
+	  	background: green;
+	  }
+
+	.holder {
+	     width: 100%;
+	  }
+}
