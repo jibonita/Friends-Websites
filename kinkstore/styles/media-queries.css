@@ -38,6 +38,11 @@
   #content{
   	margin-left: 0;
   }
+
+  /** just to test... hide the "Hot Deals" section */
+  #featured{
+  	display: none;
+  }
 }
 
 
