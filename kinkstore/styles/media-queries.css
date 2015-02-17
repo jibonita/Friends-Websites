@@ -60,6 +60,10 @@
 
 @media screen and (max-width: 250px) {
 
+	.holder {
+	     width: 250px;
+	 }
+
 	#content > ul li.item{
 	  	width: 98%;
 	  	margin: 5px 1%;
