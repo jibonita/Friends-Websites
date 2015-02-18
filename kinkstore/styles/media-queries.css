@@ -70,7 +70,7 @@
 	  }
 
 	.holder {
-	     width: 359px; /*250px;*/
+	     width: 100%; /*250px;*/
 	 }
 
 	#content > ul li.item{
