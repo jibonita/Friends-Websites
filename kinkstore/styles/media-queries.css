@@ -63,14 +63,14 @@
 
 
 /*@media screen and (max-width: 250px) {*/
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 359px) {
 
 	body{
 	  	background: pink;
 	  }
 
 	.holder {
-	     width: 250px;
+	     width: 359px; /*250px;*/
 	 }
 
 	#content > ul li.item{
