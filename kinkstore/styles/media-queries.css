@@ -39,14 +39,11 @@
   	margin-left: 0;
   }
 
-  /** just to test... hide the "Hot Deals" section */
-  #featured{
-  	display: none;
-  }
+
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (max-device-width : 768px) {
 
 	body{
 	  	background: green;
@@ -63,7 +60,11 @@
 }
 
 
-@media screen and (max-width: 250px) {
+@media screen and (max-width: 250px) and (max-device-width : 250px){
+
+	body{
+	  	background: pink;
+	  }
 
 	.holder {
 	     width: 250px;
