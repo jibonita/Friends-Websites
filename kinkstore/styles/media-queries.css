@@ -20,7 +20,7 @@
 }
 
 
-/*
+
 @media screen and (max-width: 990px) {
   
   body{
@@ -40,10 +40,10 @@
   }
 
 
-}*/
+}
 
 
-@media screen and (max-width: 768px) and (max-device-width : 768px) {
+@media screen and (max-width: 768px) {
 
 	body{
 	  	background: green;
@@ -60,7 +60,7 @@
 }
 
 
-@media screen and (max-width: 250px) and (max-device-width : 250px){
+@media screen and (max-width: 250px) {
 
 	body{
 	  	background: pink;
