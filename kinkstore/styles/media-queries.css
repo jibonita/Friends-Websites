@@ -43,7 +43,9 @@
 }
 
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {*/
+@media screen and (max-width: 640px) {
+
 
 	body{
 	  	background: green;
@@ -60,7 +62,8 @@
 }
 
 
-@media screen and (max-width: 250px) {
+/*@media screen and (max-width: 250px) {*/
+@media screen and (max-width: 360px) {
 
 	body{
 	  	background: pink;
