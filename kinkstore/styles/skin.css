@@ -24,23 +24,23 @@ body{
 }
 
 #logo-bar{
-	font-size: 6em;
-	Qletter-spacing: -10px;
-	font-weight: 200;
-	background: url(../images/header_bgr.png) repeat-x;
+	background: url(../images/header_bgr_long.png) repeat-x;
 }
 
+#logo span{
+	font-size: 6em;
+	font-weight: 200;
+}
 
-#logo-bar span:nth-child(2n+1){
+#logo span:nth-child(2n+1){
 	color: #fa204d;
 }
 
-#logo-bar span:nth-child(2n){
+#logo span:nth-child(2n){
 	color: #fff;
 }
 
-#logo-bar span:nth-child(3n){
-	Qfont-size: 1.2em;
+#logo span:nth-child(3n){
 	display: inline-block;
 	background: #fa204d;
 	height: 10px;

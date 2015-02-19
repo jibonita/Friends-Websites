@@ -55,9 +55,41 @@
 	     width: 100%;
 	 }
 
-	 #content > ul li.item{
+	#logo-bar{
+		height: 140px;
+	}
+
+	#logo{
+		float: none;
+		height: 110px;
+	}
+
+	#logo span{
+		font-size: 5em;
+	}
+
+	#search-box{
+	 	float: none;
+	 	margin: 0;
+	 	height: 30px;
+	 	line-height: 30px;
+	}
+	#content > ul li.item{
 	  	width: 47%;
 	  	margin: 5px 1%;
+	  }
+
+	  #featured{
+	  	display: none;
+	  }
+
+	  footer .row h3 {
+	  	margin-top: 5px;
+	  }
+	  
+	  .col5{
+	  	width: 92%;
+	  	margin: 0 4%;
 	  }
 }
 
@@ -71,7 +103,12 @@
 
 	.holder {
 	     width: 100%; /*250px;*/
+	     min-width: 215px;
 	 }
+
+	#logo span{
+		font-size: 2.5em;
+	}
 
 	#content > ul li.item{
 	  	width: 98%;

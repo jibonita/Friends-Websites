@@ -17,15 +17,23 @@ body, #wrapper{
 #account-bar{
 	height:35px;
 }
+#account-bar ul{
+	display: none;
+}
 
 #logo-bar{
 	height: 110px;
+}
+
+#logo{
+	float: left;
 	line-height: 110px;
+	height: 100%;
 }
 
 #search-box{
 	float: right;
-	line-height: 110px;
+	margin-top: 55px;
 }
 
 #search-box input{
