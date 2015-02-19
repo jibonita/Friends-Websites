@@ -68,7 +68,7 @@ body{
 	background: #000;
 }
 
-#menu > ul a{
+#menu > ul > li > a{
 	font-size: 1.8em; /* 14pt */
 	color: #fff;
 	font-family: Myriad Pro;

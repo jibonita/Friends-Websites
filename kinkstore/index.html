@@ -35,6 +35,14 @@
 				<div id="logo">
 					<span>KINK</span><span>STORE</span><span></span><span>NET</span>
 				</div>
+				<div class="navbar-fluid">
+					<button type="button" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
 				<div id="search-box">
 					<input type="text" id="searchfor" /><input type="submit" onclick="javascript:alert('Go!')" value="&nbsp;" />
 				</div>
@@ -42,7 +50,19 @@
 			<nav id="menu">
 				<ul>
 				  	<li><a href="">Link 1</a></li>
-				  	<li><a href="">Link 2</a></li>
+				  	<li><a href="">Link 2</a>
+				  		<ul>
+						  	<li><a href="">Sub-Link 1</a></li>
+						  	<li><a href="">Sub-Link 2</a></li>
+						  	<li><a href="">Sub-Link 3</a></li>
+						  	<li><a href="">Sub-Link 4</a></li>
+						  	<li><a href="">Sub-Link 5</a></li>
+						  	<li><a href="">Sub-Link 6</a></li>
+						  	<li><a href="">Sub-Link 7</a></li>
+						  	<li><a href="">Sub-Link 8</a></li>
+						  	<li><a href="">Sub-Link 9</a></li>
+						</ul>
+				  	</li>
 				  	<li><a href="">Link 3</a></li>
 				  	<li><a href="">Link 4</a></li>
 				  	<li><a href="">Link 5</a></li>
@@ -242,7 +262,8 @@
 		</div>
 	</footer>
 	
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="scripts/main.js"></script>
 	<!-- </div> -->
 </body>
 </html>

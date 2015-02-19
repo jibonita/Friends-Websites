@@ -59,6 +59,10 @@
 		height: 140px;
 	}
 
+	#logo-bar .navbar-fluid{
+		display: block;
+	}
+
 	#logo{
 		float: none;
 		height: 110px;
@@ -74,6 +78,21 @@
 	 	height: 30px;
 	 	line-height: 30px;
 	}
+
+	#menu{
+		height: auto;
+		display: none;
+	}
+	#menu > ul li{
+		display: block;
+		line-height: 30px;
+	}
+
+	#menu > ul li ul{
+		display: block;
+		position: relative;
+	}
+
 	#content > ul li.item{
 	  	width: 47%;
 	  	margin: 5px 1%;
@@ -88,7 +107,7 @@
 	  }
 	  
 	  .col5{
-	  	width: 92%;
+	  	width: 42%;
 	  	margin: 0 4%;
 	  }
 }
@@ -106,14 +125,14 @@
 	     min-width: 215px;
 	 }
 
-	#logo span{
-		font-size: 2.5em;
-	}
-
 	#content > ul li.item{
 	  	width: 98%;
 	  	margin: 5px 1%;
 	  	display: block;
 	  }
 
+	.col5{
+	  	width: 92%;
+	  	margin: 0 4%;
+	  }
 }
