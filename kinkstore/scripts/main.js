@@ -1,18 +1,20 @@
 (function() {
 
-	$('.navbar-fluid button').click(function() {
-    	var speed = 800;
+    $('.navbar-fluid button').click(function() {
+        var speed = 800;
         var clicks = $(this).data('clicks');
-        if (clicks) {
-            //** hide menu
-            $('#menu').hide(speed/3);
-            alert('hide');
-        } else {
+        $(this).data("clicks", !clicks);
+
+        if (!clicks) {
             //** display menu
             $('#menu').show(speed);
-            alert('show');
+            //alert('show');
+        } else {
+
+            //** hide menu
+            $('#menu').hide(speed / 3);
+            //alert('hide');
         }
-        $(this).data("clicks", !clicks);
     });
 
 })();

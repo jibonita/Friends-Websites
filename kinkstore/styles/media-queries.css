@@ -57,10 +57,16 @@
 
 	#logo-bar{
 		height: 140px;
+		position: relative;
 	}
 
 	#logo-bar .navbar-fluid{
 		display: block;
+		top: 5px;
+	}
+
+	#logo-bar .navbar-fluid .navbar-toggle{
+		margin: 0;
 	}
 
 	#logo{
@@ -119,6 +125,11 @@
 	body{
 	  	background: pink;
 	  }
+
+	
+	#logo span{
+		font-size: 4em;
+	}
 
 	.holder {
 	     width: 100%; /*250px;*/
