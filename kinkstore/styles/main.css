@@ -27,6 +27,7 @@ body, #wrapper{
 
 #logo{
 	float: left;
+	padding-left: 10px;
 	line-height: 110px;
 	height: 100%;
 }

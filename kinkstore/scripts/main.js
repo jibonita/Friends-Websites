@@ -7,12 +7,12 @@
 
         if (!clicks) {
             //** display menu
-            $('#menu').show(speed);
+            $('#menu').show();
             //alert('show');
         } else {
 
             //** hide menu
-            $('#menu').hide(speed / 3);
+            $('#menu').hide();
             //alert('hide');
         }
     });
