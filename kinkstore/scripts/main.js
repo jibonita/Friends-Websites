@@ -1,19 +1,22 @@
 (function() {
 
     $('.navbar-fluid button').click(function() {
+		
         var speed = 800;
         var clicks = $(this).data('clicks');
-        $(this).data("clicks", !clicks);
+        $(this).data('clicks', !clicks);
+
+$('#searchfor').val(clicks);
 
         if (!clicks) {
             //** display menu
-            $('#menu').show();
-            //alert('show');
+            $('#menu').show(speed);
+           // $('#searchfor').val('show')
         } else {
 
             //** hide menu
-            $('#menu').hide();
-            //alert('hide');
+            $('#menu').hide(speed );
+           // $('#searchfor').val('hide')
         }
     });
 

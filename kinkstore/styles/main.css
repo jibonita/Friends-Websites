@@ -23,6 +23,7 @@ body, #wrapper{
 
 #logo-bar{
 	height: 110px;
+	z-index:1;
 }
 
 #logo{
@@ -36,7 +37,8 @@ body, #wrapper{
 	position: absolute;
     right: 20px;
     top: 75px;
-
+    z-index: 2;
+    
     display: none;
 }
 /**********************************/
