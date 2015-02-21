@@ -1,23 +1,24 @@
 (function() {
 
     $('.navbar-fluid button').click(function() {
-		
+
         var speed = 800;
         var clicks = $(this).data('clicks');
-        $(this).data('clicks', !clicks);
-
-$('#searchfor').val(clicks);
+        alert(!clicks)
+        $('#searchfor').val(clicks);
 
         if (!clicks) {
             //** display menu
             $('#menu').show(speed);
-           // $('#searchfor').val('show')
+            // $('#searchfor').val('show')
         } else {
 
             //** hide menu
-            $('#menu').hide(speed );
-           // $('#searchfor').val('hide')
+            $('#menu').hide(speed);
+            // $('#searchfor').val('hide')
         }
+
+        $(this).data('clicks', !clicks);
     });
 
 })();
