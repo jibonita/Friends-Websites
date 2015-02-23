@@ -7,25 +7,25 @@ $(document).ready(function() {
         var speed = 800;
         var clicks = $(this).data('clicks');
 
-        $('#searchfor').val((state?'close:':'open:')+new Date($.now()));
+        $('#searchfor').val((state?'X:':'O:')+new Date($.now()));
         clicks = state;
         state = !state;
 
         if (!clicks) {
             //** display menu
-            //$('#menu').show(speed);
-            setTimeout(function() {
-                $('#menu').css('display', 'block');
-            }, 500);
+            $('#menu').show(speed);
+            // setTimeout(function() {
+            //     $('#menu').css('display', 'block');
+            // }, 500);
 
             // $('#searchfor').val('show')
         } else {
 
             //** hide menu
-            //$('#menu').hide(speed);
-            setTimeout(function() {
-                $('#menu').css('display', 'none');
-            }, 500);
+            $('#menu').hide(speed);
+            // setTimeout(function() {
+            //     $('#menu').css('display', 'none');
+            // }, 500);
 
             // $('#searchfor').val('hide')
         }
