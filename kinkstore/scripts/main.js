@@ -1,19 +1,18 @@
 $(document).ready(function() {
 
-    var state = false;
+    var isMenuOpen = false;
     $('.navbar-fluid button.navbar-toggle').click(function() {
 
 
         var speed = 800;
-        var clicks = $(this).data('clicks');
+        // var clicks = $(this).data('clicks');
 
-        $('#searchfor').val((state?'X:':'O:')+new Date($.now()));
-        clicks = state;
-        state = !state;
-
-        if (!clicks) {
+        // $('#searchfor').val((isMenuOpen?'X:':'O:')+new Date($.now()));
+        // clicks = isMenuOpen;
+        
+        if (!isMenuOpen) {
             //** display menu
-            $('#menu').show(speed);
+            $('#menu').slideDown(speed);
             // setTimeout(function() {
             //     $('#menu').css('display', 'block');
             // }, 500);
@@ -22,7 +21,7 @@ $(document).ready(function() {
         } else {
 
             //** hide menu
-            $('#menu').hide(speed);
+            $('#menu').slideUp(speed/3);
             // setTimeout(function() {
             //     $('#menu').css('display', 'none');
             // }, 500);
@@ -30,8 +29,8 @@ $(document).ready(function() {
             // $('#searchfor').val('hide')
         }
 
-        $(this).data('clicks', !clicks);
-
+        //$(this).data('clicks', !clicks);
+        isMenuOpen = !isMenuOpen;
 
 
         // var speed = 800;
