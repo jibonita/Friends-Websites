@@ -1,12 +1,14 @@
 $(document).ready(function() {
 
+    var state = false;
     $('.navbar-fluid button.navbar-toggle').click(function() {
 
 
         var speed = 800;
         var clicks = $(this).data('clicks');
 
-        $('#searchfor').val(new Date($.now()));
+        $('#searchfor').val((state?'close:':'open:')+new Date($.now()));
+        state = !state;
 
         if (!clicks) {
             //** display menu
