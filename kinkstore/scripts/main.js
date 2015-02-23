@@ -8,6 +8,7 @@ $(document).ready(function() {
         var clicks = $(this).data('clicks');
 
         $('#searchfor').val((state?'close:':'open:')+new Date($.now()));
+        clicks = state;
         state = !state;
 
         if (!clicks) {
