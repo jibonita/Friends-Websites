@@ -3,7 +3,7 @@
   body{
   	background: red;
   }
-  .holder {
+  .holder, #menu .submenu ul{
      width: 940px;
   }
 
@@ -27,7 +27,7 @@
   	background: yellow;
   }
 
-  .holder {
+  .holder, #menu .submenu ul{
      width: 720px;
   }
 
@@ -98,9 +98,15 @@
 		line-height: 30px;
 	}
 
-	#menu > ul li ul{
+	#menu .submenu{
 		display: block;
 		position: relative;
+		text-align: left;
+	}
+
+	#menu .submenu ul{
+		margin: 0 auto;
+		width: auto;
 	}
 
 	#content > ul li.item{
@@ -139,6 +145,18 @@
 	     width: 100%; /*250px;*/
 	     min-width: 215px;
 	 }
+
+	#search-box input{
+	 	padding: 0 2% !important;
+	}
+
+	#search-box input:first-child{
+		width: 86%;
+	}
+
+	#search-box input:last-child{
+		width: 10%;
+	}
 
 	#content > ul li.item{
 	  	width: 98%;

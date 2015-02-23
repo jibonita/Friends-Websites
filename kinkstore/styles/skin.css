@@ -49,6 +49,24 @@ body{
 	margin: 70px 5px auto;
 }
 
+/** menu button for small screens **/
+.navbar-toggle {
+    background-image: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #888;
+    border-radius: 1px;
+}
+
+/* end menu btn styles */
+
+#search-box{
+	background: #858585;
+}
+
 #search-box input{
 	border:0;
 	background: #959595;
@@ -64,17 +82,27 @@ body{
 	background: #959595 url(../images/search-20.png) center no-repeat;
 }
 
-#menu{
+#menu, #menu ul li ul{
 	background: #000;
+	overflow: hidden;
 }
 
-#menu > ul > li > a{
+#menu ul li ul{
+	opacity: 0.8;
+}
+
+#menu > ul > li  a{
 	font-size: 1.8em; /* 14pt */
 	color: #fff;
 	font-family: Myriad Pro;
 	text-transform: uppercase;
 	text-decoration: none;
 	background: url(../images/expand_btn_12.png) center right no-repeat;
+}
+
+#menu > ul > li  ul a{
+	font-size: 1.5em; 
+	background: none;
 }
 
 #banner{

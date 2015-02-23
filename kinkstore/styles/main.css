@@ -38,17 +38,12 @@ body, #wrapper{
     right: 20px;
     top: 75px;
     z-index: 2;
-    
+
     display: none;
 }
-/**********************************/
 
-
-
+/** menu button for small screens **/
 .navbar-toggle {
-    background-image: none;
-    border: 1px solid #ddd;
-    border-radius: 4px;
     float: right;
     margin-bottom: 8px;
     margin-right: 15px;
@@ -75,8 +70,6 @@ button {
     width: 1px;
 }
 .navbar-toggle .icon-bar {
-    background-color: #888;
-    border-radius: 1px;
     display: block;
     height: 2px;
     width: 22px;
@@ -85,8 +78,8 @@ button {
 .navbar-toggle .icon-bar + .icon-bar {
     margin-top: 4px;
 }
+/** end menu button styles**/
 
-/*****************************************/
 #search-box{
 	float: right;
 	margin-top: 55px;
@@ -117,12 +110,20 @@ button {
 	display: block;
 }
 
-#menu > ul li ul{
+#menu .submenu{
 	display: none;
-	position: absolute;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	text-align: center;
 }
 
-#menu > ul li:hover ul{
+#menu .submenu ul{
+	margin: 0 auto;
+	width: 1024px; /* the same width as .holder */
+}
+
+#menu > ul li:hover .submenu{
 	display: block;
 }
 
