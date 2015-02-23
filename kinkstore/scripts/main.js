@@ -6,7 +6,7 @@ $(document).ready(function() {
         var speed = 800;
         var clicks = $(this).data('clicks');
 
-        $('#searchfor').val(clicks);
+        $('#searchfor').val(new Date($.now()));
 
         if (!clicks) {
             //** display menu
