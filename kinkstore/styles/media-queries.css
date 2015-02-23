@@ -147,3 +147,10 @@
 	  	margin: 0 4%;
 	  }
 }
+
+@media only screen and (max-width: 365px) {
+
+	#logo span{
+		font-size: 3.5em;
+	}
+}

@@ -1,4 +1,4 @@
-(function() {
+$(document).ready(function(){
 
     $('.navbar-fluid button').click(function() {
 
@@ -43,4 +43,4 @@
         // $(this).data('clicks', !clicks);
     });
 
-})();
+});
