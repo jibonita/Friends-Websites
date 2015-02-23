@@ -2,8 +2,7 @@ $(document).ready(function(){
 
     $('.navbar-fluid button').click(function() {
 
-        setTimeout(function() {
-
+        
             var speed = 800;
             var clicks = $(this).data('clicks');
 
@@ -11,18 +10,20 @@ $(document).ready(function(){
 
             if (!clicks) {
                 //** display menu
-                $('#menu').show(speed);
+                //$('#menu').show(speed);
+                $('#menu').css('display', 'block');
                 // $('#searchfor').val('show')
             } else {
 
                 //** hide menu
-                $('#menu').hide(speed);
+                //$('#menu').hide(speed);
+                $('#menu').css('display', 'none');
                 // $('#searchfor').val('hide')
             }
 
             $(this).data('clicks', !clicks);
 
-        }, 1000);
+        
 
         // var speed = 800;
         // var clicks = $(this).data('clicks');

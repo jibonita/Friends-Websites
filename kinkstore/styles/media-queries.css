@@ -85,6 +85,10 @@
 	 	line-height: 30px;
 	}
 
+	#banner{
+		display: none;
+	}
+
 	#menu{
 		height: auto;
 		display: none;
@@ -148,7 +152,7 @@
 	  }
 }
 
-@media only screen and (max-width: 365px) {
+@media only screen and (max-width: 320px) {
 
 	#logo span{
 		font-size: 3.5em;
