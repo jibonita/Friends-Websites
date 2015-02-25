@@ -39,7 +39,12 @@
   	margin-left: 0;
   }
 
-
+  .item-img, .item-info  {
+	margin: 2%;
+	width: 98%;
+	float: none;
+	}
+	
 }
 
 
