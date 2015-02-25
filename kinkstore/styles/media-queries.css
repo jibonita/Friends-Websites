@@ -63,6 +63,7 @@
 	#logo-bar .navbar-fluid{
 		display: block;
 		top: 5px;
+		right: 5px;
 	}
 
 	#logo-bar .navbar-fluid .navbar-toggle{

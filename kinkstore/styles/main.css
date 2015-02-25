@@ -155,11 +155,11 @@ button {
 }
 #sidebar ul li a{
 	display: block;
+	padding-right: 12px;
 }
 
 #content{
 	margin-left: 250px;
-	border: 1px solid red;
 }
 
 #content > ul li.item{
@@ -167,8 +167,6 @@ button {
 	width: 240px;
 	display: inline-block;
 	text-align: center;
-
-	Qborder: 1px dashed blue;
 }
 
 #content > ul li.item img{
@@ -251,4 +249,27 @@ footer .row h3{
 
 footer .row li{
 	margin: 6px 0;
+}
+
+/*** inside page ***/
+.item-img {
+	margin: 2%;
+	width: 58%;
+	float: left;
+
+	background: lightblue;
+}
+
+.item-img img{
+	width: 100%;
+}
+
+.item-info {
+	float: left;
+	width: 38%;
+	background: orange;
+}
+
+.item-info .item-price{
+	margin: 20px 10px;
 }
