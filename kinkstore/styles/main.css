@@ -253,11 +253,11 @@ footer .row li{
 
 /*** inside page ***/
 .item-img {
-	margin: 2%;
-	width: 58%;
+	margin: 2% 1% 2% 2%;
+	width: 57%;
 	float: left;
 
-	background: lightblue;
+	Qbackground: lightblue;
 }
 
 .item-img img{
@@ -265,9 +265,10 @@ footer .row li{
 }
 
 .item-info {
+	margin: 2% 2% 2% 1%;
+	width: 37%;
 	float: left;
-	width: 38%;
-	background: orange;
+	Qbackground: orange;
 }
 
 .item-info .item-price{

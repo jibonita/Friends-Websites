@@ -39,11 +39,11 @@
   	margin-left: 0;
   }
 
-  .item-img, .item-info  {
-	margin: 2%;
-	width: 98%;
-	float: none;
-	}
+  #content:after, #content:before {
+    content: " ";
+    display: block;
+    clear: both;
+}
 	
 }
 
@@ -132,7 +132,13 @@
 	  	width: 42%;
 	  	margin: 0 4%;
 	  }
-}
+
+	 #content .item-img, #content .item-info  {
+		margin: 2%;
+		width: 96%;
+		float: none;
+		}
+	}
 
 
 /*@media screen and (max-width: 250px) {*/
