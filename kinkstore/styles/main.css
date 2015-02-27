@@ -274,3 +274,43 @@ footer .row li{
 .item-info .item-price{
 	margin: 20px 10px;
 }
+
+/** item More info Block **/
+.item-more-info{
+    clear: both;
+    margin-top: 31px;
+}
+
+.item-more-info .section{}
+
+.item-more-info .section .title{
+}
+
+.item-more-info .section .title a{
+    display: block;
+    padding: 12px 17px;
+}
+
+.item-more-info .section .title a i.icon-plus {
+    float: right;
+    padding: 5px 5px 4px 4px;
+}
+.item-more-info .section .title a i.icon-plus:before {
+    content: "";
+}
+.item-more-info .active .title {
+    border-bottom: medium none !important;
+}
+.item-more-info .active .title i.icon-plus:before {
+    content: "";
+}
+
+.item-more-info .section .section-content{
+	padding: 13px;
+    padding-top: 0;
+	display: none;
+}
+
+.item-more-info .active .section-content {
+	display: block;
+}

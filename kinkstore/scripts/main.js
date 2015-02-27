@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
     var isMenuOpen = false;
     $('.navbar-fluid button.navbar-toggle').click(function() {
@@ -14,6 +14,24 @@ $(document).ready(function() {
         }
 
         isMenuOpen = !isMenuOpen;
+    });
+
+
+    //** inside page item info accordion
+    $('.accordion .section').click(function(event) {
+        event.preventDefault();
+
+        var $clicked = $(this).find('.section-content');
+        
+        $('.accordion .section-content').not($clicked).slideUp(function() {
+            // remove 'active' class from .section
+            $(this).parent().removeClass('active');
+        });
+
+        $clicked.slideToggle(function() {
+            $(this).parent().toggleClass('active');
+        });
+
     });
 
 });
