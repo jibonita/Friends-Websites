@@ -1,10 +1,4 @@
-div{
-	Qborder: 1px solid black;
-}
-
-
 body, #wrapper{
-	Qborder: 2px solid red;
 	text-align: center;
 }
 
@@ -294,15 +288,6 @@ footer .row li{
 .item-more-info .section .title a i.icon-plus {
     float: right;
     padding: 5px 5px 4px 4px;
-}
-.item-more-info .section .title a i.icon-plus:before {
-    content: "";
-}
-.item-more-info .active .title {
-    border-bottom: medium none !important;
-}
-.item-more-info .active .title i.icon-plus:before {
-    content: "";
 }
 
 .item-more-info .section .section-content{
