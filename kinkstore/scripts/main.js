@@ -23,10 +23,10 @@ $(function() {
 
         var $clicked = $(this).find('.section-content');
         
-        $('.accordion .section-content').not($clicked).slideUp(function() {
-            // remove 'active' class from .section
-            $(this).parent().removeClass('active');
-        });
+        // $('.accordion .section-content').not($clicked).slideUp(function() {
+        //     // remove 'active' class from .section
+        //     $(this).parent().removeClass('active');
+        // });
 
         $clicked.slideToggle(function() {
             $(this).parent().toggleClass('active');
