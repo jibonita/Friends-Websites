@@ -266,21 +266,18 @@ footer .row li a{
 .item-more-info .section .title a i.icon-plus {
     border: 3px solid #c1c1c1;
     border-radius: 15px;
-    font-size: 0.5em;
+    margin-top: -4px;
 }
 
 .item-more-info .section .title a i.icon-plus:before {
-    background: url(../images/others/plus-16-fat.png) center right no-repeat;
-    content:"+";
-    color: #666;
-    font-weight: bold;
+    background: url(../images/plus-7-fat.png) center no-repeat;
+    
 }
 
 .item-more-info .active .title a i.icon-plus:before {
-    background: url(./images/others/minus-16-fat.png) center right no-repeat;
-    content:"ss";
-    color: transparent;
+    background: url(../images/minus-7-fat.png) center no-repeat;
 }
+
 
 .item-more-info .section .section-content{
 	border: medium none;

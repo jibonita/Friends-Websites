@@ -285,6 +285,14 @@ footer .row li{
     padding: 12px 17px;
 }
 
+.item-more-info .section .title a i.icon-plus:before,
+.item-more-info .active .title a i.icon-plus:before {
+	content:"";
+    height: 7px;
+    width:7px;
+    display: block;
+}
+
 .item-more-info .section .title a i.icon-plus {
     float: right;
     padding: 5px 5px 4px 4px;
@@ -299,3 +307,5 @@ footer .row li{
 .item-more-info .active .section-content {
 	display: block;
 }
+
+
