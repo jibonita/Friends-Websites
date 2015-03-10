@@ -32,7 +32,7 @@ $(function() {
             $(this).parent().toggleClass('active');
         });
 
-    $('#stef').html($.now());
+        $('#stef').html('s:'+$.now());
 
     });
 
