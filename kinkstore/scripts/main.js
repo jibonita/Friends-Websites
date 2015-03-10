@@ -19,6 +19,8 @@ $(function() {
 
     //** inside page item info accordion
     $('.accordion .section').on('touchstart', function(event) {
+        $('#stef').html('Touchstart: ' + $.now());
+
         event.preventDefault();
         event.stopPropagation();
     });
