@@ -28,9 +28,11 @@ $(function() {
         //     $(this).parent().removeClass('active');
         // });
 
-        $clicked.slideToggle(function() {
-            $(this).parent().toggleClass('active');
-        });
+        // $clicked.slideToggle(function() {
+        //     $(this).parent().toggleClass('active');
+        // });
+
+    $('#stef').html($.now());
 
     });
 
