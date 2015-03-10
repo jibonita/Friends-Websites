@@ -37,7 +37,7 @@ $(function() {
             $(this).parent().toggleClass('active');
         });
 
-        $('#stef').html('s:' + $.now());
+        $('#stef').html('t:' + $.now());
 
     });
 
