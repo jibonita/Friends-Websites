@@ -18,21 +18,25 @@ $(function() {
 
 
     //** inside page item info accordion
+    $('.accordion .section').on('touchstart', function(event) {
+        event.preventDefault();
+    })
+
     $('.accordion .section').click(function(event) {
         event.preventDefault();
 
         var $clicked = $(this).find('.section-content');
-        
-        // $('.accordion .section-content').not($clicked).slideUp(function() {
-        //     // remove 'active' class from .section
-        //     $(this).parent().removeClass('active');
-        // });
+
+        $('.accordion .section-content').not($clicked).slideUp(function() {
+            // remove 'active' class from .section
+            $(this).parent().removeClass('active');
+        });
 
         $clicked.slideToggle(function() {
             $(this).parent().toggleClass('active');
         });
 
-        $('#stef').html('s:'+$.now());
+        $('#stef').html('s:' + $.now());
 
     });
 
