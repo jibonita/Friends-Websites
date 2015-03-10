@@ -20,7 +20,8 @@ $(function() {
     //** inside page item info accordion
     $('.accordion .section').on('touchstart', function(event) {
         event.preventDefault();
-    })
+        event.stopPropagation();
+    });
 
     $('.accordion .section').click(function(event) {
         event.preventDefault();
