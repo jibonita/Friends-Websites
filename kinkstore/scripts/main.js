@@ -20,13 +20,14 @@ $(function() {
     //** inside page item info accordion
     $('.accordion .section').on('touchstart', function(event) {
         $('#stef').html('Touchstart: ' + $.now());
-
+        console.log('touch start: '+$.now());
         event.preventDefault();
         event.stopPropagation();
     });
 
     $('.accordion .section').click(function(event) {
         event.preventDefault();
+        console.log('click: '+$.now());
 
         var $clicked = $(this).find('.section-content');
 
