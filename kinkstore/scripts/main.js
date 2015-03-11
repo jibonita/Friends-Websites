@@ -25,8 +25,9 @@ $(function() {
         event.stopPropagation();
     });
 
-    $('.accordion .section').click(function(event) {
+    $('.accordion .section p a').click(function(event) {
         event.preventDefault();
+        event.stopPropagation();
         console.log('click: '+$.now()+ this.innerHTML);
 
         var $clicked = $(this).find('.section-content');
