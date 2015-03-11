@@ -27,7 +27,7 @@ $(function() {
 
     $('.accordion .section').click(function(event) {
         event.preventDefault();
-        console.log('click: '+$.now());
+        console.log('click: '+$.now()+ this.innerHTML);
 
         var $clicked = $(this).find('.section-content');
 
