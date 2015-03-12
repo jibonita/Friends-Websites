@@ -192,6 +192,7 @@ h2.featured-title{
 #featured{
 	margin: 10px auto;
 	text-align: center;
+	padding: 0 50px;
 }
 
 #featured h2.featured-title{
@@ -199,8 +200,19 @@ h2.featured-title{
 
 }
 
+#featured .crsl-nav .previous{
+	float: left;
+    margin-left: -45px;
+    margin-top: 100px;
+}
+
+#featured .crsl-nav .next{
+	float: right;
+    margin-right: -35px;
+    margin-top: 100px;
+}
+
 #featured ul{
-	padding: 0 45px;
 	height: 250px;
 	overflow: hidden;
 }

@@ -19,16 +19,18 @@ $(function() {
 
     //** inside page item info accordion
     $('.accordion .section').on('touchstart', function(event) {
-        $('#stef').html('Touchstart: ' + $.now());
-        console.log('touch start: '+$.now());
-        event.preventDefault();
+        //$('#stef').html('Touchstart: ' + $.now());
+        //console.log('touch start: '+$.now());
+        //event.preventDefault();
         event.stopPropagation();
+
+        //$('#stef').html('Touchstart-ENDs: ' + $.now());
     });
 
-    $('.accordion .section p a').click(function(event) {
+    $('.accordion .section').click(function(event) {
         event.preventDefault();
-        event.stopPropagation();
-        console.log('click: '+$.now()+ this.innerHTML);
+        //event.stopPropagation();
+        //console.log('click: '+$.now()+ this.innerHTML);
 
         var $clicked = $(this).find('.section-content');
 
@@ -41,8 +43,15 @@ $(function() {
             $(this).parent().toggleClass('active');
         });
 
-        $('#stef').html('q:' + $.now());
+        //$('#stef').html('click:' + $.now());
 
     });
 
+});
+
+jQuery(document).ready(function($) {
+    $('.crsl-items').carousel({
+        visible: 4,
+        itemMinWidth: 200
+    });
 });
