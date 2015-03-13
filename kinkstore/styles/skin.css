@@ -2,12 +2,14 @@ body{
   	font-size: 10px;
 	font-family: Arial;
 	
-	Qbackground-image: url(../images/wallpaper_sample_1600_10q.jpg), url(../images/bgr_grad.png);
-	background-image: url(../images/wallpaper_sample_1650_10q.jpg), url(../images/bgr_grad.png);
+	/*background-image: url(../images/wallpaper_sample_1650_10q.jpg), url(../images/bgr_grad.png);
 	background-position: top right, left top;
 	background-repeat: no-repeat, repeat-x;
 
-
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
 }
 
 a{
@@ -15,13 +17,10 @@ a{
 }
 
 #wrapper{
-	background: red;
-}
+	}
 
 #holder{
-	Qbackground: url(../mockup_1340.jpg) center top no-repeat;
-	border: 2px solid blue;
-}
+	}
 
 #account-bar{
 	background: #252525;
@@ -111,6 +110,7 @@ a{
 
 #banner{
 	background: #bebebe;
+	opacity: 0.5;
 }
 
 #container{

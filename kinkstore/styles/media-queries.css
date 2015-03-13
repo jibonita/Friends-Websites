@@ -43,10 +43,23 @@
     content: " ";
     display: block;
     clear: both;
-}
+	}
 	
 }
 
+/* @media screen and (min-width: 769px) {*/
+@media screen and (min-width: 641px){
+	body{
+	  	background-image: url(../images/wallpaper_sample_1650_10q.jpg), url(../images/bgr_grad.png);
+		background-position: top right, left top;
+		background-repeat: no-repeat, repeat-x;
+
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
 
 /* @media screen and (max-width: 768px) {*/
 @media screen and (max-width: 640px) {
