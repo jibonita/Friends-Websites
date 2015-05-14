@@ -60,6 +60,11 @@
 		background-size: cover;
 	}
 }
+@media screen and (max-width: 720px) {
+	.holder {
+	     width: 100%;
+	 }
+}
 
 /* @media screen and (max-width: 768px) {*/
 @media screen and (max-width: 640px) {
@@ -69,9 +74,9 @@
 	  	background: green;
 	  }
 
-	.holder {
+	/*.holder {
 	     width: 100%;
-	 }
+	 }*/
 
 	#logo-bar{
 		height: 140px;

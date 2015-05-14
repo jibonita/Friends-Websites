@@ -115,6 +115,7 @@ button {
 #menu .submenu ul{
 	margin: 0 auto;
 	width: 1024px; /* the same width as .holder */
+
 }
 
 #menu > ul li:hover .submenu{

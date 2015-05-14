@@ -108,9 +108,12 @@ a{
 	background: none;
 }
 
+#header{
+}
 #banner{
 	background: #bebebe;
 	opacity: 0.5;
+
 }
 
 #container{
