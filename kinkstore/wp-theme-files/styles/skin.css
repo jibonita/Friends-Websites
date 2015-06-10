@@ -1,0 +1,301 @@
+body{
+  	font-size: 10px;
+	font-family: Arial;
+	color: #fff;
+	
+	/*background-image: url(../images/wallpaper_sample_1650_10q.jpg), url(../images/bgr_grad.png);
+	background-position: top right, left top;
+	background-repeat: no-repeat, repeat-x;
+	*/
+	-webkit-background-size: auto 100%;
+	-moz-background-size: auto 100%;
+	-o-background-size: auto 100%;
+	background-size: auto 100%;
+}
+
+a{
+	text-decoration: none;
+	color: #fff;
+}
+
+#wrapper{
+	}
+
+#holder{
+	}
+
+#account-bar{
+	background: #252525;
+}
+
+#logo-bar{
+	background: url(../images/header_bgr_long.png) repeat-x;
+}
+
+#logo span{
+	font-size: 6em;
+	font-weight: 200;
+}
+
+#logo span:nth-child(2n+1){
+	color: #fa204d;
+}
+
+#logo span:nth-child(2n){
+	color: #fff;
+}
+
+#logo span:nth-child(3n){
+	display: inline-block;
+	background: #fa204d;
+	height: 10px;
+	width: 10px;
+	border-radius: 5px;
+	margin: 70px 5px auto;
+}
+
+/** menu button for small screens **/
+.navbar-toggle {
+    background-image: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #888;
+    border-radius: 1px;
+}
+
+/* end menu btn styles */
+
+#search-box{
+	background: #858585;
+}
+
+#search-box input{
+	border:0;
+	background: #959595;
+	opacity: 0.8;
+}
+
+#search-box input[type='text']{
+	padding: 0 15px;
+}
+
+#search-box input[type='submit'], #search-box input:last-child{
+	padding: 0 20px;
+	background: #959595 url(../images/search-20.png) center no-repeat;
+}
+
+#menu, #menu ul li ul{
+	background: #000;
+	overflow: hidden;
+}
+
+#menu ul li ul{
+	opacity: 0.8;
+}
+
+#menu > ul > li  a{
+	font-size: 1.8em; /* 14pt */
+	color: #fff;
+	font-family: Myriad Pro;
+	text-transform: uppercase;
+	text-decoration: none;
+	/* this background is currently NOT USED ...
+	background: url(../images/expand_btn_12.png) center right no-repeat; */
+}
+
+.non-expand-item{
+	background: none !important;
+}
+
+#menu > ul > li  ul a{
+	font-size: 1.5em; 
+	background: none;
+}
+
+#header{
+}
+#banner{
+	background: #bebebe;
+	opacity: 0.5;
+
+}
+
+#container{
+	background: #000;
+}
+
+#sidebar{
+	font-size: 1.6em;
+}
+
+#sidebar h3.label{
+	padding: 10px 25px 0 17px;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #a40927;
+}
+
+#sidebar ul li{
+
+}
+#sidebar ul li a{
+	color: #fff;
+	background: url(../images/expand_right.png) center right no-repeat;
+	text-decoration: none;
+}
+
+#content{
+	background: #111;
+}
+
+#content h2.featured-title{
+	color: #fb2860;
+	font-size: 1.8em;
+}
+
+.item{
+	font-size: 1.6em; /* 16pt */
+	font-family: Myriad Pro;
+	
+}
+.item-title a{
+	color: #999;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.price{
+	color: #fb2860;
+	font-weight: bold;
+}
+
+.old-price{
+	color: #a5adbc;
+	font-weight: bold;
+	text-decoration: line-through;
+}
+
+.btn-addtocart{
+	border: 1px solid #f60b45;
+	border-radius: 6px;
+
+	background: #fe5c81;
+	background: -moz-linear-gradient(90deg, #fe5c81 0%, #fe2d57 100%);
+	background: -webkit-linear-gradient(90deg, #fe5c81 0%, #fe2d57 100%);
+	background: -o-linear-gradient(90deg, #fe5c81 0%, #fe2d57 100%);
+	background: -ms-linear-gradient(90deg, #fe5c81 0%, #fe2d57 100%);
+	background: linear-gradient(180deg, #fe5c81 0%, #fe2d57 100%);
+	
+	color: #fff;
+	text-shadow: 1px 1px #aaa;
+	text-transform: uppercase;
+}
+
+#featured{
+	background: #111;
+}
+
+
+
+footer{
+	 background: #000;
+}
+
+footer .row h3{
+	color: #fb2860;
+	font-size: 1.6em;
+}
+
+footer .row li a{
+	color: #525252;
+	text-decoration: none;
+	font-size: 1.4em;
+}
+
+#copyright{
+	color: #afafaf;
+	border-top: 2px solid #0d0d0d;
+	padding: 18px 0 12px;
+	font-size: 1.2em;
+}
+
+/*** inside page ***/
+.item-info h2.item-title {
+	font-size: 2.2em;
+	letter-spacing: 1;
+	text-transform: uppercase;
+	color: #fb2860;
+}
+
+.item-info .item-desc {
+	font-size: 1.3em;
+	color: #666;
+}
+
+.item-info .item-price {
+	font-size: 1.7em;
+}
+
+.item-info .item-to-cart {
+	padding-left: 5px;
+	font-size: 1.3em;
+	line-height: 1.7em;
+}
+
+.item-info .btn-addtocart {
+	font-size: 1.3em;
+}
+
+.item-info .quantity {
+	margin: 0 20px;
+	padding: 0 10px;
+	font-size: 1.3em;
+	width: 25px;
+}
+
+/** item More info Block **/
+.item-more-info{
+	border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 1px 1px 0;
+}
+
+.item-more-info .section{
+	border-bottom: 1px solid #c1c1c1;
+}
+
+.item-more-info .section .title a{
+    color: #000;
+    font-size: 1.15em;
+    text-transform: uppercase;
+}
+
+.item-more-info .section .title a i.icon-plus {
+    border: 3px solid #c1c1c1;
+    border-radius: 15px;
+    margin-top: -4px;
+}
+
+.item-more-info .section .title a i.icon-plus:before {
+    background: url(../images/plus-7-fat.png) center no-repeat;
+    
+}
+
+.item-more-info .active .title a i.icon-plus:before {
+    background: url(../images/minus-7-fat.png) center no-repeat;
+}
+
+
+.item-more-info .section .section-content{
+	border: medium none;
+    font-size: 0.92em;
+}
+
+
+.navigation {
+	color: #fff;
+	font-size: 12px;
+}

@@ -1,0 +1,191 @@
+@media screen and (max-width: 1200px) {
+  
+  body{
+  	background-color: red;
+  }
+  .holder, #menu .submenu ul{
+     width: 940px;
+  }
+
+  #content > ul li.item{
+  	width: 31%;
+  	margin: 5px 1%;
+  }
+
+  #content > ul li.item img{
+  	width: 90%;
+  	height: auto;
+  }
+
+}
+
+
+
+@media screen and (max-width: 990px) {
+  
+  body{
+  	background-color: yellow;
+  }
+
+  .holder, #menu .submenu ul{
+     width: 720px;
+  }
+
+  #sidebar{
+  	display: none;
+  }
+
+  #content{
+  	margin-left: 0;
+  }
+
+  #content:after, #content:before {
+    content: " ";
+    display: block;
+    clear: both;
+	}
+	
+}
+
+@media screen and (max-width: 720px) {
+	.holder {
+	     width: 100%;
+	 }
+}
+
+/* @media screen and (max-width: 768px) {*/
+@media screen and (max-width: 640px) {
+
+	body{
+	  	background-color: green;
+	  }
+
+	#logo-bar{
+		height: 140px;
+		position: relative;
+	}
+
+	#logo-bar .navbar-fluid{
+		display: block;
+		top: 5px;
+		right: 5px;
+	}
+
+	#logo-bar .navbar-fluid .navbar-toggle{
+		margin: 0;
+	}
+
+	#logo{
+		float: none;
+		height: 110px;
+	}
+
+	#logo span{
+		font-size: 5em;
+	}
+
+	#search-box{
+	 	float: none;
+	 	margin: 0;
+	 	height: 30px;
+	 	line-height: 30px;
+	 	text-align: right;
+	}
+
+	#banner{
+		display: none;
+	}
+
+	#menu{
+		height: auto;
+		display: none;
+	}
+	#menu > ul li{
+		display: block;
+		line-height: 30px;
+	}
+
+	#menu .submenu{
+		display: block;
+		position: relative;
+		text-align: left;
+	}
+
+	#menu .submenu ul{
+		margin: 0 auto;
+		width: auto;
+	}
+
+	#content > ul li.item{
+	  	width: 47%;
+	  	margin: 5px 1%;
+	  }
+
+	  #featured{
+	  	display: none;
+	  }
+
+	  footer .row h3 {
+	  	margin-top: 5px;
+	  }
+	  
+	  .col5{
+	  	width: 42%;
+	  	margin: 0 4%;
+	  }
+
+	 #content .item-img, #content .item-info  {
+		margin: 2%;
+		width: 96%;
+		float: none;
+		}
+	}
+
+
+/*@media screen and (max-width: 250px) {*/
+@media only screen and (max-width: 365px) {
+
+	body{
+	  	background-color: pink;
+	  }
+
+	
+	#logo span{
+		font-size: 4em;
+	}
+
+	.holder {
+	     width: 100%; /*250px;*/
+	     min-width: 215px;
+	 }
+
+	#search-box input{
+	 	padding: 0 2% !important;
+	}
+
+	#search-box input:first-child{
+		width: 86%;
+	}
+
+	#search-box input:last-child{
+		width: 10%;
+	}
+
+	#content > ul li.item{
+	  	width: 98%;
+	  	margin: 5px 1%;
+	  	display: block;
+	  }
+
+	.col5{
+	  	width: 92%;
+	  	margin: 0 4%;
+	  }
+}
+
+@media only screen and (max-width: 320px) {
+
+	#logo span{
+		font-size: 3.5em;
+	}
+}

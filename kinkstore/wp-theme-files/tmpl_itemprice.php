@@ -1,0 +1,2 @@
+$$IF|SalePrice$$$$IF|BasicPrice$$<span class="old-price">$$PRICE$$</span>$$ENDIF|BasicPrice$$$$SALE_PRICE$$ $$ENDIF|SalePrice$$ 
+$$IF|NotSalePrice$$ $$IF|BasicPrice$$$$PRICE$$$$ENDIF|BasicPrice$$ $$ENDIF|NotSalePrice$$
