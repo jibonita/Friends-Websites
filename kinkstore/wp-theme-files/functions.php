@@ -266,11 +266,11 @@ function generate_add_to_cart_button($data, $template){
 			if($eshopoptions['cart_text_where']=='1') 
 				$template = '<p class="eshop-cart-text-above">'.stripslashes($eshopoptions['cart_text']).'</p>'.$template;
 		}
-
+		
 		// $hiddenfields .= '
 		// 	<form action="'.get_permalink($eshopoptions['cart']).'" method="post" class="eshop addtocart" id="eshopprod'.$postid.$uniq.'">';
-		$template - str_replace('$$ADDTOCART_ACTION$$', get_permalink($eshopoptions['cart']), $template);
-		$template - str_replace('$$POSTID_UNIQ$$', $postid.$uniq, $template);
+		$template = str_replace('$$ADDTOCART_ACTION$$', get_permalink($eshopoptions['cart']), $template);
+		$template = str_replace('$$POSTID_UNIQ$$', $postid.$uniq, $template);
 
 		$theid = sanitize_file_name($data['sku']);
 
@@ -312,7 +312,7 @@ function generate_add_to_cart_button($data, $template){
 
 		// $replace .='<label for="qty'.$theid.$uniq.'" class="qty">'.__('<abbr title="Quantity">Qty</abbr>:','eshop').'</label>
 		// <input type="text" value="'.$addqty.'" id="qty'.$theid.$uniq.'" maxlength="3" size="3" name="qty" class="iqty" />';
-		$template - str_replace('$$SKU_UNIQ$$', $theid.$uniq, $template);
+		$template = str_replace('$$SKU_UNIQ$$', $theid.$uniq, $template);
 
 		$hiddenfields .='
 		<input type="hidden" name="pclas" value="'.$eshop_product['shiprate'].'" />
