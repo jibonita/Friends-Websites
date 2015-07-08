@@ -8,10 +8,10 @@ const IMAGE_GALLERY_ITEM_TEMPLATE =
 '<li><a href="#"><img src="$$THUMBNAIL$$" data-large="$$LARGE_IMAGE$$" alt="$$ALT_TEXT$$" data-description="$$DESCRIPTION$$" /></a></li>';
 
 
-const PRODUCT_PRICES_TEMPLATE = ' $$IF|ProductInSale$$ $$IF|SalePrice$$$$IF|BasicPrice$$<span class="old-price">$$PRICE$$</span>$$ENDIF|BasicPrice$$$$SALE_PRICE$$ $$ENDIF|SalePrice$$
- 	$$IF|NotSalePrice$$ $$IF|BasicPrice$$$$PRICE$$$$ENDIF|BasicPrice$$ $$ENDIF|NotSalePrice$$
- 	$$ENDIF|ProductInSale$$  $$IF|ProductNotInSale$$
-	$$PRICE$$$$ENDIF|ProductNotInSale$$';
+// const PRODUCT_PRICES_TEMPLATE = ' $$IF|ProductInSale$$ $$IF|SalePrice$$$$IF|BasicPrice$$<span class="old-price">$$PRICE$$</span>$$ENDIF|BasicPrice$$$$SALE_PRICE$$ $$ENDIF|SalePrice$$
+//  	$$IF|NotSalePrice$$ $$IF|BasicPrice$$$$PRICE$$$$ENDIF|BasicPrice$$ $$ENDIF|NotSalePrice$$
+//  	$$ENDIF|ProductInSale$$  $$IF|ProductNotInSale$$
+// 	$$PRICE$$$$ENDIF|ProductNotInSale$$';
 
 // const ITEM_TO_CART_TEMPLATE = 
 // ' $$IF|DisplayCartButton$$<div class="item-to-cart">
@@ -23,6 +23,12 @@ const PRODUCT_PRICES_TEMPLATE = ' $$IF|ProductInSale$$ $$IF|SalePrice$$$$IF|Basi
 // 	$$HIDDEN_FIELDS$$
 // </form>
 // </div>$$ENDIF|DisplayCartButton$$';
+
+const PRODUCT_PRICES_TEMPLATE = ' $$IF|ProductInSale$$ $$IF|SalePrice$$$$IF|BasicPrice$$<span class="old-price">$$PRICE$$</span>$$ENDIF|BasicPrice$$$$SALE_PRICE$$ $$ENDIF|SalePrice$$
+ 	$$IF|NotSalePrice$$ $$IF|BasicPrice$$$$PRICE$$$$ENDIF|BasicPrice$$ $$ENDIF|NotSalePrice$$
+ 	$$ENDIF|ProductInSale$$  $$IF|ProductNotInSale$$
+	$$PRICE$$$$ENDIF|ProductNotInSale$$';
+
 const ITEM_TO_CART_TEMPLATE = 
 ' $$IF|DisplayCartButton$$<div class="item-to-cart">
 	<label for="qty$$SKU_UNIQ$$" class="qty">
