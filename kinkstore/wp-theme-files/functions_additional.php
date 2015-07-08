@@ -84,150 +84,64 @@ function set_kinkstore_header(){
 <?php
 	}
 }
-
-/////////////////////////////////////////////////////////////////////////
-/*
-override wp_list_categories
-
-*/
-function wp_list_categories_custom1( $args = '' ) {
-	$defaults = array(
-		'show_option_all' => '', 'show_option_none' => __('No categories'),
-		'orderby' => 'name', 'order' => 'ASC',
-		'style' => 'list',
-		'show_count' => 0, 'hide_empty' => 1,
-		'use_desc_for_title' => 1, 'child_of' => 0,
-		'feed' => '', 'feed_type' => '',
-		'feed_image' => '', 'exclude' => '',
-		'exclude_tree' => '', 'current_category' => 0,
-		'hierarchical' => true, 'title_li' => __( 'Categories' ),
-		'echo' => 1, 'depth' => 0,
-		'taxonomy' => 'category'
-	);
-
-	$r = wp_parse_args( $args, $defaults );
-
-	// if ( !isset( $r['pad_counts'] ) && $r['show_count'] && $r['hierarchical'] )
-	// 	$r['pad_counts'] = true;
-
-	// if ( true == $r['hierarchical'] ) {
-	// 	$r['exclude_tree'] = $r['exclude'];
-	// 	$r['exclude'] = '';
-	// }
-
-	// if ( ! isset( $r['class'] ) )
-	// 	$r['class'] = ( 'category' == $r['taxonomy'] ) ? 'categories' : $r['taxonomy'];
-
-	// if ( ! taxonomy_exists( $r['taxonomy'] ) ) {
-	// 	return false;
-	// }
-
-	$show_option_all = $r['show_option_all'];
-	$show_option_none = $r['show_option_none'];
-
-	$categories = get_categories( $r );
-
+/** Add to Cart form properties **/
+function get_addtocart_action(){
+	global $eshopoptions;
+	return get_permalink($eshopoptions['cart']);		
+}
+function get_add_tocart_form_id(){
+	global $post, $uniq;
 	
-	$output = '';
-	if ( $r['title_li'] && 'list' == $r['style'] ) {
-		$output = '<li class="' . esc_attr( $r['class'] ) . '">' . $r['title_li'] . '<ul>';
+	$postid = $post->ID;
+	if (!isset($uniq)) {
+		$uniq = rand();
 	}
-	if ( empty( $categories ) ) {
-		if ( ! empty( $show_option_none ) ) {
-			if ( 'list' == $r['style'] ) {
-				$output .= '<li class="cat-item-none">' . $show_option_none . '</li>';
-			} 
-			// else {
-			// 	$output .= $show_option_none;
-			// }
-		}
-	} else {
-		if ( ! empty( $show_option_all ) ) {
-			$posts_page = ( 'page' == get_option( 'show_on_front' ) && get_option( 'page_for_posts' ) ) ? get_permalink( get_option( 'page_for_posts' ) ) : home_url( '/' );
-			$posts_page = esc_url( $posts_page );
-			if ( 'list' == $r['style'] ) {
-				$output .= "<li class='cat-item-all'><a href='$posts_page'>$show_option_all</a></li>";
-			} 
-			// else {
-			// 	$output .= "<a href='$posts_page'>$show_option_all</a>";
-			// }
-		}
-
-		if ( empty( $r['current_category'] ) && ( is_category() || is_tax() || is_tag() ) ) {
-			$current_term_object = get_queried_object();
-			if ( $current_term_object && $r['taxonomy'] === $current_term_object->taxonomy ) {
-				$r['current_category'] = get_queried_object_id();
-			}
-		}
-
-		if ( $r['hierarchical'] ) {
-			$depth = $r['depth'];
-		} else {
-			$depth = -1; // Flat.
-		}
-		$output .= walk_category_tree( $categories, $depth, $r );
+	else {
+		//echo "$uniq was already set in 1<br>";
 	}
-
-	if ( $r['title_li'] && 'list' == $r['style'] )
-		$output .= '</ul></li>';
-
-	/**
-	 * Filter the HTML output of a taxonomy list.
-	 *
-	 * @since 2.1.0
-	 *
-	 * @param string $output HTML output.
-	 * @param array  $args   An array of taxonomy-listing arguments.
-	 */
-	$html = apply_filters( 'wp_list_categories', $output, $args );
-
-	if ( $r['echo'] ) {
-		echo $html;
-	} else {
-		return $html;
-	}
+	return 'eshopprod'.$postid.$uniq;
 }
 
-/**
-	 * Starts the list before the elements are added.
-	 *
-	 * @see Walker::start_lvl()
-	 *
-	 * @since 2.1.0
-	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param int    $depth  Depth of category. Used for tab indentation.
-	 * @param array  $args   An array of arguments. Will only append content if style argument value is 'list'.
-	 *                       @see wp_list_categories()
-	 */
-	 function start_lvl( &$output, $depth = 0, $args = array() ) {
-		if ( 'list' != $args['style'] )
-			return;
 
-		$indent = str_repeat("\t", $depth);
-		$output .= "$indent<div class='submenu'><ul class='children'>\n";
+
+function custom_eshop_show_cart() {
+	global $wpdb, $blog_id,$wp_query,$eshopoptions;
+	$echo='';
+	include ABSPATH . "wp-content/plugins/eshop/cart-functions.php";
+	
+	br();
+	print_r($_POST) ; 
+	br();
+	print_r($_SESSION) ; 
+	//cache
+	eshop_cache();
+	if(isset($_SESSION['eshopcart'.$blog_id]['error'])){
+		$echo .= $_SESSION['eshopcart'.$blog_id]['error'];
+		unset($_SESSION['eshopcart'.$blog_id]['error']);
 	}
-
-	/**
-	 * Ends the list of after the elements are added.
-	 *
-	 * @see Walker::end_lvl()
-	 *
-	 * @since 2.1.0
-	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param int    $depth  Depth of category. Used for tab indentation.
-	 * @param array  $args   An array of arguments. Will only append content if style argument value is 'list'.
-	 *                       @wsee wp_list_categories()
-	 */
-	 function end_lvl( &$output, $depth = 0, $args = array() ) {
-		if ( 'list' != $args['style'] )
-			return;
-
-		$indent = str_repeat("\t", $depth);
-		$output .= "$indent</ul></div>\n";
+	if(isset($_SESSION['eshopcart'.$blog_id]['enote'])){
+		$echo .= $_SESSION['eshopcart'.$blog_id]['enote'];
+		unset($_SESSION['eshopcart'.$blog_id]['enote']);
 	}
-
-
-
+	if(isset($_SESSION['eshopcart'.$blog_id])){
+		if((isset($wp_query->query_vars['eshopaction']) && urldecode($wp_query->query_vars['eshopaction'])=='cancel') && !isset($_POST['save'])){
+			$echo.= "<h3>".__('The order was cancelled.','eshop')."</h3>"; 
+			$echo.= '<p>'.__('We have not deleted the contents of your shopping cart in case you may want to edit its content.','eshop').'</p>';
+		}
+		if($eshopoptions['shop_page']!=''){
+			$return=get_permalink($eshopoptions['shop_page']);
+		}elseif(isset($_SESSION['lastproduct'.$blog_id])){
+			$return=get_permalink($_SESSION['lastproduct'.$blog_id]);
+		}else{
+			$return=get_permalink($eshopoptions['cart']);
+		}
+		$echo.= display_cart($_SESSION['eshopcart'.$blog_id],'true', $eshopoptions['checkout']);
+		$echo.='<ul class="continue-proceed eshopcp0"><li class="rtnshopping"><a href="'.$return.'">'.__('&laquo; Continue Shopping','eshop').'</a></li>
+		<li class="gotocheckout"><a href="'.get_permalink($eshopoptions['checkout']).'">'.__('Proceed to Checkout &raquo;','eshop').'</a></li></ul>';
+	}else{
+		//can be altered as desired.
+		$echo.= '<p><strong class="eshoperror error">'.__('Your shopping cart is currently empty.','eshop').'</strong></p>';
+	}
+	return $echo;
+}
 ?>

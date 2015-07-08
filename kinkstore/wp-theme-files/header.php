@@ -56,7 +56,9 @@
 				$header = get_header_image();
 				if ($header) {
 				?>
-				<img src="<?php header_image(); ?>" height="auto" width="100%" alt="" />
+				<a href="<?php echo home_url(); ?>">
+					<img src="<?php header_image(); ?>" height="auto" width="100%" alt="" />
+				</a>
 				<?php
 				}
 				else {

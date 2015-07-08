@@ -203,10 +203,6 @@ function replace_pricing_template($data, $args, $template){
 /* ----------------------------------------------------*/
 				//$template = str_replace($template, '$$TEST_ADDTOCART_BTN$$', '<br>plugins\eshop\eshop-add-cart.php<hr>'.htmlspecialchars($result));
 			}
-			else{
-				$template = str_replace($template, '$$TEST_ADDTOCART_BTN$$', '');
-			}
-			
 
 	}
  	else {
@@ -226,13 +222,19 @@ function replace_pricing_template($data, $args, $template){
 }
 
 function generate_add_to_cart_button($data, $template){
-	global $eshopoptions, $wpdb, $post;
+	global $eshopoptions, $wpdb, $post, $uniq;
 	
 	$postid = $post->ID;
 	$stkav = get_post_meta( $postid, '_eshop_stock',true);
     $eshop_product=maybe_unserialize(get_post_meta( $postid, '_eshop_product',true ));
 	$stocktable = $wpdb->prefix ."eshop_stock";
-	$uniq = rand();
+	if (!isset($uniq)) {
+		$uniq = rand();
+	}
+	else {
+		//echo "$uniq was already set in 2<br>";
+	}
+	
 
 	//** settings-> eShop -> General -> Product options -> Stock Control 
 	if(isset($eshopoptions['stock_control']) && 'yes' == $eshopoptions['stock_control']){
@@ -266,11 +268,11 @@ function generate_add_to_cart_button($data, $template){
 			if($eshopoptions['cart_text_where']=='1') 
 				$template = '<p class="eshop-cart-text-above">'.stripslashes($eshopoptions['cart_text']).'</p>'.$template;
 		}
-		
+
 		// $hiddenfields .= '
 		// 	<form action="'.get_permalink($eshopoptions['cart']).'" method="post" class="eshop addtocart" id="eshopprod'.$postid.$uniq.'">';
-		$template = str_replace('$$ADDTOCART_ACTION$$', get_permalink($eshopoptions['cart']), $template);
-		$template = str_replace('$$POSTID_UNIQ$$', $postid.$uniq, $template);
+		// $template = str_replace('$$ADDTOCART_ACTION$$', get_permalink($eshopoptions['cart']), $template);
+		// $template = str_replace('$$POSTID_UNIQ$$', $postid.$uniq, $template);
 
 		$theid = sanitize_file_name($data['sku']);
 
@@ -291,6 +293,12 @@ function generate_add_to_cart_button($data, $template){
 			&& isset($eshop_product['sale']) && $eshop_product['sale']=='yes')
 		{	
 			$saleprice = $eshop_product['products']['1']['saleprice'];
+		}
+		if (isset($saleprice)) {
+			$itemprice = $saleprice;
+		}
+		else{
+			$itemprice = $price;
 		}
 
 		$currst=1;
@@ -315,6 +323,7 @@ function generate_add_to_cart_button($data, $template){
 		$template = str_replace('$$SKU_UNIQ$$', $theid.$uniq, $template);
 
 		$hiddenfields .='
+		<input type="hidden" name="price" value="'.$itemprice.'" />
 		<input type="hidden" name="pclas" value="'.$eshop_product['shiprate'].'" />
 		<input type="hidden" name="pname" value="'.stripslashes(esc_attr($eshop_product['description'])).'" />
 		<input type="hidden" name="pid" value="'.$eshop_product['sku'].'" />
@@ -347,8 +356,6 @@ function generate_add_to_cart_button($data, $template){
 		}
 	}
 	
-	//echo $hiddenfields;
-
 	return $template;
 }
 
@@ -425,7 +432,7 @@ function print_custom_fields($array_fields){
 			$field_values_array = explode ( $separator , $field_values);
 
 			//echo '<div class="custom-field field-'.$field.'">' . $field . ': <select>';
-			echo "<div class=\"custom-field field-$field\">$field: <select>";
+			echo "<div class=\"custom-field field-$field\">$field: <select name=\"item-$field\">";
 			foreach ($field_values_array as $value) {
 				//echo '<option value="'.$value.'">' . $value . "</option>";
 				echo "<option value=\"$value\">$value</option>";

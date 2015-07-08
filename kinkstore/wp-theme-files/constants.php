@@ -13,17 +13,24 @@ const PRODUCT_PRICES_TEMPLATE = ' $$IF|ProductInSale$$ $$IF|SalePrice$$$$IF|Basi
  	$$ENDIF|ProductInSale$$  $$IF|ProductNotInSale$$
 	$$PRICE$$$$ENDIF|ProductNotInSale$$';
 
+// const ITEM_TO_CART_TEMPLATE = 
+// ' $$IF|DisplayCartButton$$<div class="item-to-cart">
+// <form action="$$ADDTOCART_ACTION$$" method="post" id="eshopprod$$POSTID_UNIQ$$">
+// 	<label for="qty$$SKU_UNIQ$$" class="qty">
+// 		<abbr title="Quantity">Qty</abbr>:</label>
+// 	<input type="text" value="1" id="qty$$SKU_UNIQ$$" maxlength="3" size="3" name="qty" class="iqty quantity" />
+// 	<input class="btn-addtocart" value="'.BTN_ADD_TO_CART_LABEL.'" title="'.BTN_ADD_TO_CART_TITLE.'" type="submit" />
+// 	$$HIDDEN_FIELDS$$
+// </form>
+// </div>$$ENDIF|DisplayCartButton$$';
 const ITEM_TO_CART_TEMPLATE = 
 ' $$IF|DisplayCartButton$$<div class="item-to-cart">
-<form action="$$ADDTOCART_ACTION$$" method="post" id="eshopprod$$POSTID_UNIQ$$">
 	<label for="qty$$SKU_UNIQ$$" class="qty">
 		<abbr title="Quantity">Qty</abbr>:</label>
-	<input type="text" value="1" id="qty$$UNIQUE_ID$$" maxlength="3" size="3" name="qty" class="iqty quantity" />
+	<input type="text" value="1" id="qty$$SKU_UNIQ$$" maxlength="3" size="3" name="qty" class="iqty quantity" />
 	<input class="btn-addtocart" value="'.BTN_ADD_TO_CART_LABEL.'" title="'.BTN_ADD_TO_CART_TITLE.'" type="submit" />
 	$$HIDDEN_FIELDS$$
-</form>
-</div>$$ENDIF|DisplayCartButton$$<br> $$TEST_ADDTOCART_BTN$$';
-
+</div>$$ENDIF|DisplayCartButton$$';
 
 define(PRODUCT_INFO_TEMPLATE, 
 	'<li class="item crsl-item">
@@ -33,7 +40,6 @@ define(PRODUCT_INFO_TEMPLATE,
 		PRODUCT_PRICES_TEMPLATE .
 		'</p>
 		<a class="btn-addtocart$$IF|DisplayCartButton$$ display$$ENDIF|DisplayCartButton$$">'.BTN_ADD_TO_CART_LABEL.'</a>
-		$$TEST_ADDTOCART_BTN$$
 	</li>'
 	)
 
