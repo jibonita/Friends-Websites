@@ -111,11 +111,11 @@ function custom_eshop_show_cart() {
 	include ABSPATH . "wp-content/plugins/eshop/cart-functions.php";
 	
 	br();
-	echo 'Post: ';
+	echo '<hr>Post: ';
 	print_r($_POST) ; 
 	br();br();
 	print_r($_SESSION) ; 
-	echo '<hr';
+	echo '<hr>';
 	//cache
 	eshop_cache();
 	if(isset($_SESSION['eshopcart'.$blog_id]['error'])){
@@ -257,11 +257,10 @@ function custom_display_cart($shopcart, $change, $eshopcheckout,$pzone='',$shipa
 						}
 					}
 					/* end */
-					//opsets
-//----------------
-					echo '<h1> Стигнах до ред 262 на custom_display_cart</h1>';
-//----------------
 
+					//opsets
+					//** not using Option sets currently
+					/*
 					if(isset($opt['optset'])){
 						$data['optset']=$opt['optset'];
 						$data['addoprice']=$addoprice;
@@ -271,9 +270,16 @@ function custom_display_cart($shopcart, $change, $eshopcheckout,$pzone='',$shipa
 					}else{
 						$optset='';
 					}
+					*/ $optset='';
+print_r($opt);br();
+//----------------
+					echo '<h1> Стигнах до ред 276 на custom_display_cart</h1>';
+//----------------
+
 					$echooptset=apply_filters('eshop_optset_cart_display',$optset);
 					if( !has_filter( 'eshop_optset_cart_display') ) $echooptset=nl2br($optset);
 					$textdesc='<a href="'.get_permalink($opt['postid']).'">'.stripslashes($opt["pname"]).' <span class="eshopidetails">('.$opt['pid'].' : '.stripslashes($opt['item']).')</span></a>'.$echooptset;
+					
 					$echoimg=$eimg;
 					if(isset($eshopoptions['widget_cart_type']) && $eshopoptions['widget_cart_type']=='1' && $iswidget=='w'  ){
 						$textdesc='';

@@ -8,7 +8,7 @@
 if (have_posts()) : while (have_posts()) : the_post();
 
 	//the_content();
-
+	
 	if (function_exists('custom_eshop_show_cart')) {
 		echo 'eshop_show_cart exists';
 		echo custom_eshop_show_cart();
